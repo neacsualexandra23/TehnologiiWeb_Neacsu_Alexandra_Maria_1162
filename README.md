@@ -1,6 +1,6 @@
 # TehnologiiWeb_Neacsu_Alexandra_Maria_1162
 # Management de melodii favorite cu integrare Spotify 
-Această aplicație web a fost realizată pentru disciplina Tehnologii Web și permite utilizatorilor să gestioneze o listă personală de melodii favorite, oferind în același timp acces la informații actualizate din API-urile Spotify Web API sau Last.fm API.
+Această aplicație web este realizată pentru disciplina Tehnologii Web și permite utilizatorilor să gestioneze o listă personală de melodii favorite, oferind în același timp acces la informații actualizate din API-urile Spotify Web API sau Last.fm API.
 Aplicația combină funcționalități de gestionare locală a melodiilor cu acces la date reale despre artiști, albume și popularitate.
 Funcționalitati:
 - Adăugarea melodiilor: - Utilizatorii pot adăuga o melodie preferată introducând:titlul piesei,numele artistului, albumul

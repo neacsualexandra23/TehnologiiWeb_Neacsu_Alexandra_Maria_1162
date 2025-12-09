@@ -2,3 +2,4 @@
 .vs/
 *.vsidx
 node_modules/
+.env

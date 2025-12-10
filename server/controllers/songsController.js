@@ -3,7 +3,7 @@ import SearchHistory from "../models/SearchHistory.js";
 import { searchTracks } from "../services/spotifyService.js";
 
 // ------------------------------------
-// 🔍 1. Search Spotify + Save History
+//  1. Search Spotify + Save History
 // ------------------------------------
 export const searchSpotify = async (req, res) => {
   try {
@@ -28,7 +28,7 @@ export const searchSpotify = async (req, res) => {
 };
 
 // ------------------------------------
-// 💾 2. Save Song in Database
+//  2. Save Song in Database
 // ------------------------------------
 export const saveSong = async (req, res) => {
   try {
@@ -63,7 +63,7 @@ export const saveSong = async (req, res) => {
 };
 
 // ------------------------------------
-// 📜 3. Get Search History
+//  3. Get Search History
 // ------------------------------------
 export const getHistory = async (req, res) => {
   try {
@@ -80,7 +80,7 @@ export const getHistory = async (req, res) => {
 };
 
 // ------------------------------------
-// 🗑️ 4. Clear Search History
+// 4. Clear Search History
 // ------------------------------------
 export const clearHistory = async (req, res) => {
   try {
@@ -139,3 +139,33 @@ export const getFavorites = async (req, res) => {
     res.status(500).json({ error: "Failed to fetch favorites" });
   }
 };
+
+export async function getAllSaved(req, res) {
+  try {
+    const songs = await Song.findAll(); 
+    res.json(songs);
+  } catch (err) {
+    console.error("Error fetching all songs:", err);
+    res.status(500).json({ error: "Failed to load songs" });
+  }
+}
+
+export async function deleteSong(req, res) {
+  try {
+    const { id } = req.params;
+
+    const deleted = await Song.destroy({ where: { id } });
+
+    if (!deleted) {
+      return res.status(404).json({ error: "Song not found" });
+    }
+
+    res.json({ message: "Song deleted successfully" });
+
+  } catch (error) {
+    console.error("Delete song error:", error);
+    res.status(500).json({ error: "Failed to delete song" });
+  }
+}
+
+

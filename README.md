@@ -13,5 +13,5 @@ afișarea imaginilor de copertă ale pieselor.
 Tehnologii utilizate:
 
 Backend: Node.js, Express.js,Sequelize,SQLite
-Frontend: React.js, Axios sau Fetch API,Interfață modernă pentru interacțiuni rapide
+Frontend: React.js,Interfață modernă pentru interacțiuni rapide
 Integrare API: Spotify Web API pentru căutare și afișarea detaliilor despre melodiile preferate.

@@ -28,7 +28,7 @@ const Song = sequelize.define("Song", {
     allowNull: true
   },
 
-  //  NOUL câmp:
+  //  NOUL camp:
   isFavorite: {
     type: DataTypes.BOOLEAN,
     allowNull: false,

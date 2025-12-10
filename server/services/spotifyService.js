@@ -50,7 +50,7 @@ export const searchTracks = async (query) => {
   } catch (err) {
     console.error("❌ Spotify search failed on first attempt:", err.response?.data || err.message);
 
-    // token expired → retry once
+    // token expired -> retry once
     try {
       await getAccessToken();
 
